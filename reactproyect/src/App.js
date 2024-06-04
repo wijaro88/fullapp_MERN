@@ -1,3 +1,5 @@
+import React from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <button className='btn btn-primary btn-lg'><i className="fa-brands fa-react"></i></button>
       </header>
     </div>
   );
