@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 // importamos los componentes
-import CompShowBlogs from './blog/ShowBlogs';
+import CompShowBlogs from './components/ShowBlogs';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 

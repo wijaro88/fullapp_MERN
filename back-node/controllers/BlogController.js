@@ -16,10 +16,10 @@ export const getAllBlogs = async (req, res) => {
 // 2. Mostrar un registro
 export const getBlog = async (req, res) => {
     try {
-        const blog = await BlogModel.findAll({
-            where: { id: req.params.id }
-        })
-        res.json(blog[0])
+        const blog = await BlogModel.findByPk(req.params.id)
+      
+        res.json(blog)
+
     } catch (error) {
         res.json({ message: error.message })
     }

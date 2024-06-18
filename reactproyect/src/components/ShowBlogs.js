@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-// import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const URI = 'http://localhost:8000/blogs/';
 
@@ -18,25 +18,20 @@ const CompShowBlogs = () => {
         setBlog(res.data);
     }
 
-
-
     //Procedimiento para eliminar un Blog
-
     const deleteBlogs = async (id) => {
         axios.delete(`${URI}${id} `);
         getBlogs();
-
     }
 
     return (
         <div className='container'>
             <div className='row'>
                 <div className='col'>
-                    <link to="/create" className='btn btn-primary'>Crear</link>
+                    <Link to="/create" className='btn btn-primary'>Crear</Link>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                
                                 <th scope="col">Title</th>
                                 <th scope="col">Content</th>
                                 <th scope="col">Actions</th>
@@ -48,7 +43,7 @@ const CompShowBlogs = () => {
                                     <td> {blog.title}</td>
                                     <td> {blog.content}</td>
                                     <td>
-                                        <link to={`/edit/${blog.id}`} className='btn btn-info'>Edit</link>
+                                        <Link to={`/edit/${blog.id}`} className='btn btn-info'>Edit</Link>
                                         <button onClick={()=>deleteBlogs(blog.id)} className = 'btn btn-danger'>Delete</button> 
                                     </td>
                                 </tr>
