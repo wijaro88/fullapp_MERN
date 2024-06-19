@@ -28,7 +28,7 @@ const CompShowBlogs = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col'>
-                    <Link to="/create" className='btn btn-primary'>Crear</Link>
+                    <Link to="/create" className='btn btn-primary mt-2 mb-2'><i className="fa-regular fa-plus"></i></Link>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -43,8 +43,8 @@ const CompShowBlogs = () => {
                                     <td> {blog.title}</td>
                                     <td> {blog.content}</td>
                                     <td>
-                                        <Link to={`/edit/${blog.id}`} className='btn btn-info'>Edit</Link>
-                                        <button onClick={()=>deleteBlogs(blog.id)} className = 'btn btn-danger'>Delete</button> 
+                                        <Link to={`/edit/${blog.id}`} className='btn btn-info'><i class="fa-regular fa-pen-to-square"></i></Link>
+                                        <button onClick={()=>deleteBlogs(blog.id)} className = 'btn btn-danger'><i class="fa-thin fa-eraser"></i></button> 
                                     </td>
                                 </tr>
                             ))}
