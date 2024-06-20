@@ -3,6 +3,7 @@ import cors from "cors";
 import db from "./database/db.js";
 import blogRoutes from './routes/routes.js'
 
+// const cors = require('cors');
 const app = express();
 
 app.use( cors( ) );
